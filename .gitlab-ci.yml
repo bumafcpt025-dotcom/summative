@@ -1,0 +1,19 @@
+image: maven:3.9-eclipse-temurin-17
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq make
+
+# TODO Q4.3: Define the stages for this pipeline in the correct order.
+# The compile job below is provided as a worked example.
+# Add a job for the test stage and a job for the package stage.
+# The package job must keep the built jar as a pipeline artifact.
+
+# stages:
+#   - ???
+#   - ???
+#   - ???
+
+compile:
+  stage: compile
+  script:
+    - make compile
